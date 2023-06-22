@@ -6,12 +6,8 @@ $(document).ready(function() {
       let description = $(this)?.find(".description-input")?.val()?.trim();
       let image = $(this)?.find(".image-input")?.val()?.trim();
       let price = $(this)?.find(".price-input")?.val()?.trim();
-      
-      if ((name === "") && (description === "")) {
-        alert("Please enter a valid name and description. \n Mailen Catalini");
-      } 
-
-      else if (name === "") {
+    
+      if (name === "") {
         alert("Please enter a valid name. \n Mailen Catalini"); 
       } 
       
@@ -26,8 +22,11 @@ $(document).ready(function() {
       else if (price === "") {
         alert("Please enter a valid price. \n Mailen Catalini");
       }
-  
-      // this.submit();
+      
+      else {
+        window.location.href = $(this).attr("action");
+      }
+
     });
   });
 
