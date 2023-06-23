@@ -30,7 +30,7 @@
             <div class="text-form-container">
                 <h1 class="form-title">Create PRODUCT</h1>
                 <div class="form-container">
-                    <form action="form-upload.html" method="post" class="product-form">
+                    <form action="form-upload.html" method="POST" class="product-form">
                         <label for="name">Product name:</label>
                         <input class="name-input" id="name" type="text" name="name">
     
@@ -41,9 +41,8 @@
                         <input class="description-input" id="description" type="text" name="description">
     
                         <label for="price">Price:</label>
-                        <input class="price-input" id="price" type="number" name="price" min="1">
-
-        
+                        <input class="price-input" id="price" name="price">
+                        
                         <div class="button-container">
                             <button class="cancel-button button" type="reset">Cancel</button>
                             <button class="submit-button button" type="submit">Submit</button>
@@ -76,6 +75,7 @@
              </p>
          </div>
      </footer>
-     <script src="../../assets/js/validations.js"></script>
+     <!-- <script src="../../assets/js/validations.js"></script> -->
+     <script src="../../assets/js/validaciones.js"></script>
 </body>
 </html>

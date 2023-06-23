@@ -9,24 +9,26 @@ $(document).ready(function() {
     
       if (name === "") {
         alert("Please enter a valid name. \n Mailen Catalini"); 
+        return;
       } 
       
-      else if (description === "") {
+      if (description === "") {
         alert("Please enter a valid description. \n Mailen Catalini");
+        return;
       }
 
-      else if (image === "") {
+      if (image === "") {
         alert("Please enter a valid image. \n Mailen Catalini");
+        return;
       }
 
-      else if (price === "") {
+      if (price === "") {
         alert("Please enter a valid price. \n Mailen Catalini");
+        return;
       }
       
-      else {
-        window.location.href = $(this).attr("action");
-      }
-
+      window.location.href = $(this).attr("action");
+  
     });
   });
 
