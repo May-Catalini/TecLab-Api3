@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --silver: #c2bcbc;
+    --california: #f5a104;
+    --tahiti-gold: #dc8004;   
+    --dark: #222120;  
+    --white: #ffffff; 
+    --gray: #666666;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-title {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.table-title h1 {
+    font-family: 'Gugi', cursive;
+    color: var(--dark);
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.table-title button {
+    margin-left: 50px;
+    padding: 10px;
+    border: 2px solid var(--dark);
+    border-radius: 5px;
+    color: var(--dark);
+    background-color: var(--dark);
+    font-size: 15px;
+}
+
+.table-title button:hover {
+    cursor: pointer;
+    background-color: var(--tahiti-gold);
+    border-color: var(--tahiti-gold);
+}
+
+.table-title a {
+    text-decoration: none;
+    color: var(--tahiti-gold);
+}
+
+.table-title button span {
+    font-weight: 900;
+    margin: 0;
+    color: var(--tahiti-gold);
+}
+
+.table-title button:hover span,
+.table-title button:hover a 
+{
+    color: var(--white);
+}
+
+.table-container {
+    margin: 10px;
+}
+
+table {
+    border-spacing: 0;
+    background-color: var(--white);
+    width: 100%;
+}
+
+table img {
+    height: 100px;
+    width: 100px;
+    transition: transform 0.5s ease;
+}
+
+table img:hover {
+    transform: scale(1.1);
+}
+
+table thead {
+    background-color: var(--dark);
+    color: var(--tahiti-gold);
+}
+
+table thead tr th {
+    padding: 10px 20px;
+}
+
+table tbody tr th {
+    padding: 10px;
+    text-align: start;
+    font-weight: 100;
+}
+
+table tbody tr:hover {
+    background-color: var(--silver);
+}
+
+p {
+    text-align: center;
+    color: var(--white);
+}

@@ -17,11 +17,16 @@
         <span>Computer Company</span>
             <ul class="navbar">
                 <li>
-                    <a href="../../backend/views/categories.html">Create CATEGORY</a>
+                    <a href="../../views/home.html">HOME</a>
                 </li>
                 <li>
-                    <a href="../../backend/views/products.html">Create PRODUCT</a>
-                    
+                    <a href="../../backend/categories.php">CATEGORIES</a>
+                </li>
+                <li>
+                    <a href="../../backend/products.php">PRODUCTS</a>
+                </li>
+                <li>
+                    <a href="../../backend/views/categories.html">Create CATEGORY</a>
                 </li>
             </ul>
     </nav>
@@ -35,13 +40,16 @@
                         <input class="name-input" id="name" type="text" name="name">
     
                         <label for="image">Image:</label>
-                        <input class="image-input" id="image" type="file" name="image" accept="image/*">
+                        <input class="image-input" id="image" type="file" name="image" accept="image/*" multiple>
     
                         <label for="description">Description:</label>
                         <input class="description-input" id="description" type="text" name="description">
     
-                        <label for="price">Price:</label>
+                        <label for="price">Price: $</label>
                         <input class="price-input" id="price" type="number" name="price" step="0.01" min="0.01">
+
+                        <label for="category">Category</label>
+                        <input class="category-input" id="category" type="text" name="category">
                         
                         <div class="button-container">
                             <button class="cancel-button button" type="reset">Cancel</button>
@@ -53,28 +61,30 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer>
+       <div class="footer">
         <div class="contact-logo"> 
-             <a href="../../views/home.html"> <img class="logo" src="../../assets/img/fox.png" alt="logo"></a>
-            
-             <p  class="name">Fox~</p>
-             <span>Computer Company</span></div>
-         <div class="contact">
-             <h4>CONTACT :</h4>
-             <p>
-                 <img class="img-contact" src="../../assets/img/telefono.png" alt="phone">
-                 Phone: 123-456-789
-             </p>
-             <p>
-                 <img class="img-contact" src="../../assets/img/correo.png" alt="mail">
-                 Email: info@empresa.com
-             </p>
-             <p>
-                 <img class="img-contact" src="../../assets/img/direccion2.png" alt="address">
-                 Address: Calle Principal #123, Ciudad
-             </p>
-         </div>
-     </footer>
+            <a href="../../views/home.html"> <img class="logo" src="../../assets/img/fox.png" alt="logo"></a>
+           
+            <p  class="name">Fox~</p>
+            <span>Computer Company</span></div>
+        <div class="contact">
+            <h4>CONTACT :</h4>
+            <p>
+                <img class="img-contact" src="../../assets/img/telefono.png" alt="phone">
+                Phone: 123-456-789
+            </p>
+            <p>
+                <img class="img-contact" src="../../assets/img/correo.png" alt="mail">
+                Email: info@empresa.com
+            </p>
+            <p>
+                <img class="img-contact" src="../../assets/img/direccion2.png" alt="address">
+                Address: Calle Principal #123, Ciudad
+            </p>
+        </div>
+       </div>
+    </footer>
      <script src="../../assets/js/validations.js"></script>
 </body>
 </html>

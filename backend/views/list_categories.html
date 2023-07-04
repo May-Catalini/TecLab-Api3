@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../assets/css/footer.css">
+    <link rel="stylesheet" href="./../assets/css/nav.css">
+    <link rel="stylesheet" href="./../assets/css/list.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="./../views/home.html"><img class="logo" src="./../assets/img/fox.png" alt="logo"></a>
+        <p  class="name">Fox~</p>
+        <span>Computer Company</span>
+            <ul class="navbar">
+                <li>
+                    <a href="./../views/home.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./../backend/views/categories.html">Create CATEGORY</a>
+                </li>
+                <li>
+                    <a href="./products.php">PRODUCTS</a>
+                </li>
+                <li>
+                    <a href="./../backend/views/products.html">Create PRODUCT</a>
+                    
+                </li>
+            </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="table-title">
+                <h1>List of Products</h1>
+                <button>
+                    <a href="./../backend/views/products.html">
+                        <span>+</span>
+                        Add Product
+                    </a>
+                </button>
+            </div>
+            <section class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($categories as $category) { ?>
+                            <tr>
+                                <th><?php echo $category['id']; ?></th>
+                                <th><?php echo $category['name']; ?></th>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </section>
+            <p>Mailen Catalini</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="contact-logo"> 
+                <a href="./../views/home.html"> <img class="logo" src="./../assets/img/fox.png" alt="logo"></a>
+               
+                <p  class="name">Fox~</p>
+                <span>Computer Company</span></div>
+            <div class="contact">
+                <h4>CONTACT :</h4>
+                <p>
+                    <img class="img-contact" src="./../assets/img/telefono.png" alt="phone">
+                    Phone: 123-456-789
+                </p>
+                <p>
+                    <img class="img-contact" src="./../assets/img/correo.png" alt="mail">
+                    Email: info@empresa.com
+                </p>
+                <p>
+                    <img class="img-contact" src="./../assets/img/direccion2.png" alt="address">
+                    Address: Calle Principal #123, Ciudad
+                </p>
+            </div>
+        </div>
+     </footer>
+</body>
+</html>

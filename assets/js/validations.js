@@ -4,7 +4,6 @@ $(document).ready(function() {
     $("form").submit(function(event) {
       event.preventDefault();
 
-
       let name = $(this).find(".name-input").val().trim();
       let description = $(this)?.find(".description-input")?.val()?.trim();
       let image = $(this)?.find(".image-input")?.val()?.trim();
