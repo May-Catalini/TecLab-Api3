@@ -3,7 +3,6 @@
 
 try {
     $connect = $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
-    echo 'Successful connection';
 } catch (Exception $ex) {
     echo 'Filed Conection' . $ex->getMessage();
 }
