@@ -17,7 +17,7 @@ $(document).ready(function() {
       validatePrice(price);
 
       if (errorArray.length > 0) {
-      alert(errorArray.join('\n'));
+      alert(errorArray.join('\n') + '\n Mailen Catalini');
       return;
       }
       
@@ -34,7 +34,7 @@ $(document).ready(function() {
     let isValid = name !== '' && regex.test(name);
 
     if (!isValid) {
-    errorArray.push("Please enter a valid name. \n Mailen Catalini");
+    errorArray.push("Please enter a valid name.");
     }
   }
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
     let isValid = image !== '' && regex.test(image);
 
     if (!isValid) {
-    errorArray.push("Please enter a valid image. \n Mailen Catalini");
+    errorArray.push("Please enter a valid image.");
     }
   }
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
     let isValid = description !== '' && regex.test(description);
 
     if (!isValid) {
-    errorArray.push("Please enter a valid description. \n Mailen Catalini");
+    errorArray.push("Please enter a valid description.");
     }
   }
 
@@ -70,6 +70,6 @@ $(document).ready(function() {
     let isValid = price !== '' && regex.test(price);
 
     if (!isValid) {
-    errorArray.push("Please enter a valid price. \n Mailen Catalini");
+    errorArray.push("Please enter a valid price.");
     }
   }
