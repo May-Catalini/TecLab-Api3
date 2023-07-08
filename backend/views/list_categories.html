@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./../assets/css/footer.css">
     <link rel="stylesheet" href="./../assets/css/nav.css">
     <link rel="stylesheet" href="./../assets/css/list.css">
-    <title>Document</title>
+    <title>Fox~ | List Categories</title>
 </head>
 <body>
     <nav>
@@ -32,11 +32,11 @@
     <main>
         <div class="container">
             <div class="table-title">
-                <h1>List of Products</h1>
+                <h1>List of Categories</h1>
                 <button>
-                    <a href="./../backend/views/products.html">
+                    <a href="./../backend/views/categories.html">
                         <span>+</span>
-                        Add Product
+                        Add Category
                     </a>
                 </button>
             </div>
@@ -49,10 +49,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($categories as $category) { ?>
+                        <?php foreach($list_ctg as $listCategories) { ?>
                             <tr>
-                                <th><?php echo $category['id']; ?></th>
-                                <th><?php echo $category['name']; ?></th>
+                                <th><?php echo $listCategories['id_category']; ?></th>
+                                <th><?php echo $listCategories['name']; ?></th>
                             </tr>
                         <?php } ?>
                     </tbody>

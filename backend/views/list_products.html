@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./../assets/css/footer.css">
     <link rel="stylesheet" href="./../assets/css/nav.css">
     <link rel="stylesheet" href="./../assets/css/list.css">
-    <title>Document</title>
+    <title>Fox~ | List Products</title>
 </head>
 <body>
     <nav>
@@ -29,7 +29,7 @@
                 </li>
             </ul>
     </nav>
-    <main>
+    <main class="main-content">
         <div class="container">
             <div class="table-title">
                 <h1>List of Products</h1>
@@ -53,14 +53,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($products as $product) { ?>
+                        <?php foreach($list_pro as $listProducts) { 
+                            ?>
                             <tr>
-                                <th><?php echo $product['id']; ?></th>
-                                <th><?php echo $product['name']; ?></th>
-                                <th><?php echo $product['price']; ?></th>
-                                <th><?php echo $product['description']; ?></th>
-                                <th><?php echo $product['category']; ?></th>
-                                <th><img src="<?php echo $product['image']; ?>" alt="Product Image"></th>
+                                <th><?php echo $listProducts['id_product']; ?></th>
+                                <th><?php echo $listProducts['name']; ?></th>
+                                <th><?php echo $listProducts['price']; ?></th>
+                                <th><?php echo $listProducts['description']; ?></th>
+                                <th><?php echo $listProducts['name']; ?></th>
+                                <th><img src="<?php echo $listProducts['image']; ?>" alt="Product Image"></th>
                             </tr>
                         <?php } ?>
                     </tbody>
