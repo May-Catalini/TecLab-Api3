@@ -4,7 +4,7 @@ include '../class/autoload.php';
 
 if(isset($_POST['accion']) && $_POST['accion'] == 'save') {
     $myCategory = new Categories();
-    $myCategory-> name = $_POST['name'];
+    $myCategory-> name_category = $_POST['name_category'];
     $myCategory->save();
 } else if(isset($_GET['add'])) {
     include '../backend/views/categories.html';

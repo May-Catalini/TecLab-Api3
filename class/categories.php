@@ -2,7 +2,7 @@
     /*@autor Mailen Catalini*/
     class Categories {
         public $id_category;
-        public $name;
+        public $name_category;
         private $exist = false;
 
 
@@ -16,7 +16,7 @@
 
             if (isset($resp[0][$id_category])) {
                 $this->id_category = $resp[0]['id_category'];
-                $this->name = $resp[0]['name'];
+                $this->name_category = $resp[0]['name_category'];
                 $this->exist = true;
             }
         }
@@ -42,7 +42,7 @@
 
         private function insert() {
             $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
-            $resp = $db->insert('categories','name=?', "?", array($this->name));
+            $resp = $db->insert('categories','name_category=?', "?", array($this->name_category));
 
             if($resp) {
                 $this->id_category = $resp;
@@ -55,7 +55,7 @@
 
         private function update() {
             $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
-            return $db->update('categories','name=?', "id_category=?", array($this->name, $this->id_category));
+            return $db->update('categories','name_category=?', "id_category=?", array($this->name_category, $this->id_category));
         }
 
         static public function list() {

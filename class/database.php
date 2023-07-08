@@ -44,7 +44,7 @@ class base_datos
 
     function joinList($tabla, $filtros = null, $arr_prepare = null, $orden = null, $limit = null)
     {
-        $sql = "SELECT p.id_product, p.name, p.image, p.description, p.price, c.name ";
+        $sql = "SELECT p.id_product, p.name, p.image, p.description, p.price, c.name_category ";
         $sql .= "FROM " . $tabla . " p ";
         $sql .= "JOIN categories c ON c.id_category = p.category_id ";
         if ($filtros != null) {
@@ -68,7 +68,7 @@ class base_datos
 
     function getCategoriesName()
     {
-        $sql = "SELECT name FROM categories";
+        $sql = "SELECT name_category FROM categories";
 
         $resourse = $this->gbd->prepare($sql);
         $resourse->execute();
