@@ -107,11 +107,16 @@ table tbody tr:hover {
     background-color: var(--silver);
 }
 
-p {
+.my-name {
     text-align: center;
-    color: var(--white);
+    font-weight: bold;
+    color: var(--tahiti-gold);
+    margin-bottom: 100px;
+    padding: 20px;
+    display: block;
+    background-color: var(--dark);
 }
 
 .main-content {
-    margin-bottom: 100px;
+    margin-bottom: 500px;
 }

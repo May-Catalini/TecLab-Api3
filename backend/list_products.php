@@ -1,1 +1,0 @@
-listado de productos con sus cprrespondientes html.
