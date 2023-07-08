@@ -63,11 +63,23 @@ class base_datos
         if ($resourse) {
             return $resourse->fetchAll(PDO::FETCH_ASSOC);
         } else {
-            throw new Exception("No se pudo realizar la selección");
+            throw new Exception("No se pudo realizar el Join");
         }
     }
 
+    function getCategoriesName()
+    {
+        $sql = "SELECT name FROM categories";
 
+        $resourse = $this->gbd->prepare($sql);
+        $resourse->execute();
+
+        if ($resourse) {
+            return $resourse->fetchAll(PDO::FETCH_COLUMN);
+        } else {
+            throw new Exception("No se pudo obtener los nombres de las categorías");
+        }
+    }
     function delete($tabla, $filtros = null, $arr_prepare = null)
     {
         $sql = "DELETE FROM " . $tabla . "WHERE" . $filtros;

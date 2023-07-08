@@ -58,7 +58,6 @@
             }
         }
 
-
         private function update() {
             $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
             return $db->update('products','name=?,image=?,description=?,price=?,category_id=?', "id_product=?", array($this->id_product, $this->name, $this->image, $this->description, $this->price, $this->category_id));
@@ -70,6 +69,11 @@
             return $db->joinList('products');
         }
 
+        static public function getCategoriesOptions()
+        {
+            $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
+            return $db->getCategoriesName();
+        }
     }
 
 ?>

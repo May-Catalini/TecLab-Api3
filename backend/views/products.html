@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fox~ | Products</title>
-    <link rel="icon" href="../../assets/img/fox.png" type="fox">
-    <link rel="stylesheet" href="../../assets/css/nav.css">
-    <link rel="stylesheet" href="../../assets/css/footer.css">
-    <link rel="stylesheet" href="../../assets/css/form.css">
+    <link rel="icon" href="./../assets/img/fox.png" type="fox">
+    <link rel="stylesheet" href="./../assets/css/nav.css">
+    <link rel="stylesheet" href="./../assets/css/footer.css">
+    <link rel="stylesheet" href="./../assets/css/form.css">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 <body>
     <nav>
-        <a href="../../views/home.html"><img class="logo" src="../../assets/img/fox.png" alt="logo"></a>
+        <a href="./../views/home.html"><img class="logo" src="./../assets/img/fox.png" alt="logo"></a>
         <p  class="name">Fox~</p>
         <span>Computer Company</span>
             <ul class="navbar">
                 <li>
-                    <a href="../../views/home.html">HOME</a>
+                    <a href="./../views/home.html">HOME</a>
                 </li>
                 <li>
-                    <a href="../../backend/categories.php">CATEGORIES</a>
+                    <a href="./../backend/categories.php">CATEGORIES</a>
                 </li>
                 <li>
-                    <a href="../../backend/products.php">PRODUCTS</a>
+                    <a href="./../backend/products.php">PRODUCTS</a>
                 </li>
                 <li>
-                    <a href="../../backend/views/categories.html">Create CATEGORY</a>
+                    <a href="./../backend/views/categories.html">Create CATEGORY</a>
                 </li>
             </ul>
     </nav>
@@ -48,9 +48,14 @@
                         <label for="price">Price: $</label>
                         <input class="price-input" id="price" type="number" name="price" step="0.01" min="0.01">
 
-                        <label for="category">Category</label>
-                        <input class="category-input" id="category" type="text" name="category">
-                        
+                        <label for="">Category: </label>
+                        <select class="categories" name="categories" id="categories">
+                            <option value="" disabled selected hidden>Please select category</option>
+                            <?php foreach ($category_names as $categoryOption) { ?>
+                                <option value="<?php echo $categoryOption; ?>"><?php echo $categoryOption; ?></option>
+                            <?php } ?>     
+                        </select>
+
                         <div class="button-container">
                             <button class="cancel-button button" type="reset">Cancel</button>
                             <button class="submit-button button" type="submit">Submit</button>
@@ -64,27 +69,27 @@
     <footer>
        <div class="footer">
         <div class="contact-logo"> 
-            <a href="../../views/home.html"> <img class="logo" src="../../assets/img/fox.png" alt="logo"></a>
+            <a href="./../views/home.html"> <img class="logo" src="./../assets/img/fox.png" alt="logo"></a>
            
             <p  class="name">Fox~</p>
             <span>Computer Company</span></div>
         <div class="contact">
             <h4>CONTACT :</h4>
             <p>
-                <img class="img-contact" src="../../assets/img/telefono.png" alt="phone">
+                <img class="img-contact" src="./../assets/img/telefono.png" alt="phone">
                 Phone: 123-456-789
             </p>
             <p>
-                <img class="img-contact" src="../../assets/img/correo.png" alt="mail">
+                <img class="img-contact" src="./../assets/img/correo.png" alt="mail">
                 Email: info@empresa.com
             </p>
             <p>
-                <img class="img-contact" src="../../assets/img/direccion2.png" alt="address">
+                <img class="img-contact" src="./../assets/img/direccion2.png" alt="address">
                 Address: Calle Principal #123, Ciudad
             </p>
         </div>
        </div>
     </footer>
-     <script src="../../assets/js/validations.js"></script>
+     <script src="./../assets/js/validations.js"></script>
 </body>
 </html>

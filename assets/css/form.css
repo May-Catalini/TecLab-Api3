@@ -65,6 +65,19 @@ input {
     width: 400px;
 }
 
+select {
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 50px;
+    height: 35px;
+    width: 100%;
+}
+
+option {
+    background-color: var(--dark);
+    color: var(--tahiti-gold);
+}
+
 input[type="file" i] { 
     align-self: flex-start;
     background-color: transparent;

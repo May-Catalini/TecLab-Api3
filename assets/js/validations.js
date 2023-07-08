@@ -8,6 +8,8 @@ $(document).ready(function() {
       let description = $(this)?.find(".description-input")?.val()?.trim();
       let image = $(this)?.find(".image-input")?.val()?.trim();
       let price = $(this)?.find(".price-input")?.val()?.trim();
+      let category = $(this)?.find(".categories")?.val();
+      
 
       errorArray = [];
       
@@ -15,6 +17,7 @@ $(document).ready(function() {
       validateImage(image);
       validateDescription(description);
       validatePrice(price);
+      validateCategory(category);
 
       if (errorArray.length > 0) {
       alert(errorArray.join('\n') + '\n Mailen Catalini');
@@ -71,5 +74,11 @@ $(document).ready(function() {
 
     if (!isValid) {
     errorArray.push("Please enter a valid price.");
+    }
+  }
+
+  function validateCategory(category) {
+    if (category === "" || category === null) {
+      errorArray.push("Please select a valid category.");
     }
   }

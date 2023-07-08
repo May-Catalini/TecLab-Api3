@@ -53,12 +53,10 @@
             }
         }
 
-
         private function update() {
             $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
             return $db->update('categories','name=?', "id_category=?", array($this->name, $this->id_category));
         }
-
 
         static public function list() {
             $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
