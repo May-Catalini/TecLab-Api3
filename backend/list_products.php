@@ -17,7 +17,7 @@ if(isset($_POST['accion']) && $_POST['accion'] == 'save') {
     die();
 }
 $category_names = Products::getCategoriesOptions();
-$list_pro = Products::list();
+$list_pro = Products::getList();
 
 
 include '../backend/views/list_products.html';

@@ -15,8 +15,8 @@
             $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
             $resp = $db->select("products", "id_product=?", array($id_product)); 
 
-            if(isset($resp[0]['id_product'])) {
-                $this->id_product = $resp[0][$id_product];
+            if(isset($resp[0][$id_product])) {
+                $this->id_product = $resp[0]['id_product'];
                 $this->name = $resp[0]['name'];
                 $this->image = $resp[0]['image'];
                 $this->description = $resp[0]['description'];
@@ -64,9 +64,9 @@
         }
 
 
-        static public function list() {
+        static public function getList() {
             $db = new base_datos("mysql", "myproject", "127.0.0.1", "root", "");
-            return $db->joinList('products');
+            return $db->joinList('products', null, null, 'id_product');
         }
 
         static public function getCategoriesOptions()
